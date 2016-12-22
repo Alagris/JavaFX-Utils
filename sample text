@@ -1,0 +1,17 @@
+Perfect government 
+
+Every country is like an organism. It lives, grows, makes decisions. In XXI century humanity starts to truly understand how our 
+brains work. Why not to apply this knowledge to really big scale? 
+
+Imagine that every single person works like a neuron. They can vote as if they fired action potential. 1 means "yes", -1 means
+"no" and all values between mean something intermediate, including 0 which means "I have no idea". Whenever a problem emerges
+everyone WHO is directly influenced by the decision can have a voice in making it. That's why the society needs to be divided
+into some sectors. Like in a database. We could query for a certain group of people by specifying desired attibutes. Is it
+decision about health care? - let's ask doctors! Is it decision about building a new road? - let's ask citizents who live 
+nearby. 
+
+Okay but how do these problems emerge? It's not only about issues. People can also vote for new ideas or modifying the old ones.
+Well, when citizens think that something is worth consideration, they may rise a proposal to the whole nation. This is
+the first stage of voting. Everyone who is interested can point a group of people, who should, in their opinion, be allowed to 
+vote. They, however, cannot point themselves. If enough* people show interest, the system counts votes and finally selects two groups
+of people - those who were most frequently pointed and also those who most frequently pointed others*.
