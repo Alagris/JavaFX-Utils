@@ -12,6 +12,68 @@ nearby.
 
 Okay but how do these problems emerge? It's not only about issues. People can also vote for new ideas or modifying the old ones.
 Well, when citizens think that something is worth consideration, they may rise a proposal to the whole nation. This is
-the first stage of voting. Everyone who is interested can point a group of people, who should, in their opinion, be allowed to 
+the first stage of voting. 
+====version one====
+Everyone who is interested can point a group of people, who should, in their opinion, be allowed to 
 vote. They, however, cannot point themselves. If enough* people show interest, the system counts votes and finally selects two groups
-of people - those who were most frequently pointed and also those who most frequently pointed others*.
+of people - those who were most frequently pointed and also those who most frequently pointed others*. Consider this example:
+3 votes:
+old doctor A votes for people of attributes: farmer,old,has children
+young doctor B votes for people of attributes: farmer,nearby London,old
+teacher C from Liverpool votes for people of attributes: farmer,nearby Glasgow,young
+The groups of people who will take part in second stage of voting will be doctors and farmers.
+
+This raises the problem that a certain group A will vote for another group B that doesn't care or will vote the same way as A or
+is somehow dependend on A (e.g. managers and workers of the same company)
+====version two====
+Everyone can give a proposal of group of people who should vote (including himself) and must also publish a reason for 
+which that particular group is influenced be the outcome of voting. People who read it later on and agree can vote for
+this proposal. Peopel can vote for multiple proposals. There are only "yes" votes possible. A few* proposals that have the highest
+score pass to stage 2
+====end of versions===
+In the second stage only a few groups of people are allowed to vote and votes are in range between -1 and 1. It is alos weighted voting
+so the final vote is multiplied by weight 0<w<1. All the votes are then summed up. If the final result is greater than 0 then the decision 
+is "yes". Otherwise it's "no".
+
+Weight is max 1 but it could be a bit higher. The most important thing is that the limit shouldn't be too high, so that nobody will care about cheating
+in order to always stay on the top. It also should't be too low or people won't care about making good decisions either.
+
+There also exists a way to check wheather the decision was right or no. Let's call it Checker System. I don't give any hint on how it
+should work and I leave it up to the implementers, to come up with a Checker System that will perform best in their country. 
+However, the basic assumptions of Checker System are:
+- there does not exist a problem that has no 'right' decision. In some cases both decisions may be bad but one of them should be at least
+a little better than the other and this one we will call 'rigth'.
+- it means that if one decision is 'right' then always the other one is 'wrong' and vice versa.
+- it is not always said that a decission is 100% 'right' or 'wrong'. Sometimes one decision may for example be 50% 'right' and the other one 10% 'wrong'.
+- Checker System should always be able to tell how much 'right' or 'wrong' is the made decission 
+- it however may not alywas able to tell so about the unmade decisions. 
+Anyway,after some time (hours,days,months, or maybe even years) the Checker System finally rates the decission. If it was wrong then
+the weights of all the people who voted for it will decrease. It if was right then they will increase. As an example:
+2 years ago there was a voting for building a bridge.
+People voted for "yes" and now Checekr Systems says that this bridge is useless and was just a unnecesary spending. It causes
+weights of all people who voted higher than 0 (which means "yes") to decrease. It decreases proportionally to the strength of vote and the percentage of
+how 'wrong' it was, so if someone voted with 1 it will decrease much more than in case of someone who voted with 0.1 and if the decision was rated 100% 
+'wrong' the weight will decrease much more than if it was only 30% 'wrong'. People who voted for "no" may experience an increase in their voting weight 
+analogically to those who voted for "yes". However, if Checker System could not really rate the outcome a decision that was not made, no weight will change
+for the people in minority (in this case those, who voted for "yes"). 
+
+
+In short: If you decisions was right we will listen to you more. You are wise. But it you make poor decisions or don't care about
+politics and threat it as if it was a lottery, your weight will decrease and we won't listen to you.
+This system motivates all the people to think much more about the outcome of their decision. It is also based on direct democracy and does not require
+any representatives that could ever get corrupted or forget about common interest of those who are represtented. The politicts is no longer a fight between
+ideologies like conservatism or liberalism. It's rather probem-solving oriented and ideology becomes individual business. There are no parties. In fact it is better
+without any unions or parties as they could be a mean for cheating. The decision must be made by everyone individually instead of one head of party that dictates all
+the member what to say. And this is what Checker System and vote weighting is for. Of course there might appear some gurus that would claim that they always make 
+right decisions but it's not any problem. It is part of mass media and it's good to see the point of view of others.
+
+Sounds amazing but... how is it actually going to work? Who will be in change of counting votes? Isn't it too complicated logictically? The trutch is that for very long
+time it was impossible to realize but today we've got internet. The system should be automated and... open source! Yes, that's right! Open source! It may seems like
+exposing a very sensitive part of whole country to the outter world with all the spies, aspiring dictators and who knows what else. But if the system is well maintained
+(and we've got the power of whole nation for it) in fact it will be much harder to hack it than to corrupt people. Openess will provide the clarity of system and make sure
+that no engineer has added somewhere any secret backdoor. All in all it would be very recommended to add an emergency fallback system in case someone actually figured out
+how to hack it. 
+
+
+
+The only weaknesses of this system are Checker System 
